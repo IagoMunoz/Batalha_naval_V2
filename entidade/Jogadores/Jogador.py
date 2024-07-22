@@ -8,7 +8,7 @@ class Jogador(ABC):
     def __init__(self, nome_do_jogador):
         self.__jog_nome = nome_do_jogador
         self.__jog_pts = 0
-        self.__jog_partidas = []
+        self.__jog_jogos = []
 
 ####################### getters e setters #################
 
@@ -29,9 +29,14 @@ class Jogador(ABC):
         self.__jog_pts = jog_pts
 
     @property
-    def jog_partidas(self):
-        return self.__jog_partidas
+    def jog_jogos(self):
+        return self.__jog_jogos
 
-    @jog_partidas.setter
-    def jog_partidas(self, jog_partidas):
-        self.__jog_partidas = jog_partidas
+    @jog_jogos.setter
+    def jog_jogos(self, jog_jogos):
+        self.__jog_jogos = jog_jogos
+
+##################### funçoes especificas ##################
+
+    def add_partida(self, jogo_recem_jogado):
+        self.__jog_jogos.append(jogo_recem_jogado)
