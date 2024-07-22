@@ -1,5 +1,3 @@
-from Jogador import Jogador
-
 '''No começo significava Allied Mastercomputer [Computador-mestre
    Aliado], depois passou a significar Adaptative Manipulator 
    [Manipulador Adaptativo], mas mais tarde ele se tornou consciente
@@ -9,7 +7,7 @@ from Jogador import Jogador
    significa “I am”, ou seja, “eu sou”... I think, therefore I am... 
    Penso, logo existo.'''
 
-class Computador(Jogador):
+
+class CPU():
     def __init__(self):
-        super().__init__("Computador")
-        #aqui vai ter o pc inteligente
+        self.__cpu_nome = "Computador"
