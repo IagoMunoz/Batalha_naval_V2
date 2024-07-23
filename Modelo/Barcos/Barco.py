@@ -45,5 +45,21 @@ class Barco(ABC):
 
 ###################### Funçoes especificas ###################
 
-    def add_bar_pos(self, posicao_para_barco):
-        self.__bar_pos.append(posicao_para_barco)
+    def bar_pos_add(self, posicao_para_barco):
+        self.__bar_pos.append([posicao_para_barco, True])
+
+    def bar_pos_false(self, onde_acertou):
+        for positions in self.bar_pos:
+            if positions[0] == onde_acertou:
+                positions[1] == False
+    
+    def bar_vivo_false(self):
+        cont_falses = 0
+        for positions in self.bar_pos:
+            if positions[1] == False:
+                cont_falses += 1
+                
+        self.bar_vivo_false()
+        
+        if cont_falses >= self.__bar_len:
+            self.__bar_vivo = False

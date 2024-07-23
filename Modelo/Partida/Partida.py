@@ -1,0 +1,4 @@
+
+
+class Partida(self):
+    pass
