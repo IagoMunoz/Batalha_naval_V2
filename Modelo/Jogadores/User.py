@@ -53,5 +53,5 @@ class Usuario():
 
 ##################### funçoes especificas ##################
 
-    def add_partida(self, jogo_recem_jogado):
+    def user_jogos_add(self, jogo_recem_jogado):
         self.__user_jogos.append(jogo_recem_jogado)
